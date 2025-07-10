@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="viewpoint" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BCAHUB</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+     
+      
+    }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #0073e6;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 2em;
+    }
+
+    /*.search-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    #search-bar {
+      padding: 8px;
+      width: 70%;
+      max-width: 300px;
+      border-radius: 5px;
+      border: none;
+    }*/
+
+    .sidebar-toggle {
+      font-size: 24px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 160px;
+      background-color: #333;
+      color: white;
+      height: 100vh;
+      position: fixed;
+      top: 60px;
+      left: -160px;
+      overflow-y: auto;
+      transition: left 0.3s ease;
+    text-align: center;
+      z-index: 998;
+    }
+
+    .sidebar.show {
+      left: 0;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 12px 18px;
+      border-bottom: 1px solid #444;
+      color: white;
+      text-decoration: none;
+      font-size: 0.95em;
+    }
+
+    .sidebar a:hover {
+      background-color: #444;
+    }
+
+    /* SCROLLABLE LINKS */
+    .scrollable-links {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background-color: #333;
+      
+      white-space: nowrap;
+      padding-left: 0;
+      z-index: 999;
+    }
+
+    .scrollable-links a {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 15px;
+    }
+
+    .scrollable-links a:hover {
+      background-color: #0073e6;
+      color: white;
+    }
+
+    /* MAIN CONTENT */
+    .main {
+      padding: 10px;
+      margin-top: 130px;
+      width: 80%;
+     
+    }
+
+    .quastion{
+        
+            display: grid;
+            gap: 10px;
+            background-color: #eef;
+            padding: 20px;
+            width: 350px;
+            border: 4px solid rgb(222, 211, 211);
+    }
+        .quastion :hover {
+      color: #d8d510;
+    }
+
+    .quastion a{
+          color: #0055aa;
+            text-decoration: none;
+            padding: 5px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            text-align: center;
+            border-radius: 4px;
+    }
+    
+     .quastion a:hover {
+      color: #d8d510;
+    }
+
+    
+    pre code {
+      background-color: #333;
+      color: #f1f1f1;
+      display: block;
+      padding: 15px;
+      overflow-x: auto;
+      border-radius: 5px;
+    }
+
+
+
+
+    
+    /* FOOTER */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      
+      margin-top: 50px;
+      
+    }
+
+    /* DESKTOP STYLES */
+    @media (min-width: 768px) {
+     
+      .sidebar {
+        left: 0;
+      }
+
+      .sidebar-toggle {
+        display: none;
+      }
+
+      .main {
+        margin-left: 240px;
+      }
+
+      .scrollable-links {
+        padding-left: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER --
+  <header>
+    <div class="sidebar-toggle" onclick="toggleSidebar()">☰</div>
+    <div class="logo">BCA-HUB</div>
+    <div class="search-container">
+      <input type="text" id="search-bar" placeholder="Search..." />
+    </div>
+  </header>-->
+  <header>
+    <div class="sidebar-toggle" onclick="toggleSidebar()">☰</div>
+    <div class="logo">BCA-HUB</div>
+  </header>
+
+  <!-- SCROLLABLE LINKS -->
+  <div class="scrollable-links">
+    <a href="index.html">home</a>
+    <a href="#calkul">All Calculator</a>
+    <a href="#quiz">All Quiz</a>
+    <a href="#sem1"></a>
+    <a href="#same2"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+        <a href="seme1.html"></a>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar" id="sidebar">
+   <a href="#">C </a>
+  <br>
+       <a href="index.html">HOME</a>
+        <a href="#same1">sem 1</a>
+        <a href="#Same2">sem 2</a>
+        <a href="#same3">sem 3</a>
+         <a href="#seme4">sem 4</a>
+          <a href="#Semester5">sem 5</a>
+        <a href="#same6">sem 6</a>
+        <a href="cquiz.html">C Language quiz</a>
+        <a href="cheat.html">C Language cheat</a>
+         <a href="#quiz">All Quiz</a>
+        <a href="#calkul">All Calculator</a>
+   
+    
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+
+
+
+
+
+<style>
+.todo-container {
+      background: white;
+      padding: 10px 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      width: 350px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .input-group {
+      display: flex;
+      gap: 5px;
+      margin-bottom: 10px;
+    }
+    input[type="text"], input[type="date"] {
+      flex: 1;
+      padding: 12px 15px;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      font-size: 12px;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+    input[type="text"]:focus, input[type="date"]:focus {
+      border-color: #007BFF;
+    }
+    button.add-btn {
+      width: 100%;
+      padding: 12px;
+      background: #007BFF;
+      border: none;
+      color: white;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button.add-btn:hover {
+      background: #0056b3;
+    }
+    ul.todo-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 25px;
+      max-height: 350px;
+      overflow-y: auto;
+    }
+    ul.todo-list li {
+      padding: 12px 15px;
+      background: #f0f0f0;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: default;
+      transition: background 0.3s ease;
+      flex-wrap: wrap;
+    }
+    ul.todo-list li.completed .task-text {
+      text-decoration: line-through;
+      color: #888;
+    }
+    ul.todo-list li:hover {
+      background: #e2e2e2;
+    }
+    .task-text {
+      flex: 1;
+      cursor: pointer;
+      user-select: none;
+      min-width: 150px;
+    }
+    .task-due {
+      font-size: 14px;
+      color: #666;
+      margin-left: 10px;
+      white-space: nowrap;
+    }
+    .task-due.overdue {
+      color: #d9534f; /* red for overdue */
+      font-weight: bold;
+    }
+    button.delete-btn, button.edit-btn {
+      background: #ff4d4d;
+      border: none;
+      color: white;
+      padding: 6px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-left: 8px;
+      transition: background 0.3s ease;
+    }
+    button.delete-btn:hover {
+      background: #cc0000;
+    }
+    button.edit-btn {
+      background: #5bc0de;
+    }
+    button.edit-btn:hover {
+      background: #31b0d5;
+    }
+    input.edit-input {
+      font-size: 16px;
+      padding: 4px 6px;
+      margin-right: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      flex: 1;
+    }
+    input.edit-date {
+      padding: 4px 6px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      margin-right: 10px;
+    }
+  </style>
+
+
+  <div class="todo-container">
+    <h2> 📝 You can easily write down your tasks, notes, or things you need to remember. </h2>
+    <br>
+    <h2>My 🕒 DailyDo</h2>
+    <div class="input-group">
+      <input type="text" id="todoInput" placeholder="Add a new task..." />
+      <input type="date" id="dueDateInput" />
+    </div>
+    <button class="add-btn" id="addBtn">Add Task</button>
+
+    <ul class="todo-list" id="todoList"></ul>
+  </div>
+
+<script>
+  const todoInput = document.getElementById('todoInput');
+  const dueDateInput = document.getElementById('dueDateInput');
+  const addBtn = document.getElementById('addBtn');
+  const todoList = document.getElementById('todoList');
+
+  // Load tasks from localStorage or empty array
+  let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+  // Save tasks to localStorage
+  function saveTasks() {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }
+
+  // Render the task list
+  function renderTasks() {
+    todoList.innerHTML = '';
+
+    tasks.forEach((task, index) => {
+      const li = document.createElement('li');
+      li.classList.toggle('completed', task.completed);
+
+      // Task text span
+      const taskText = document.createElement('span');
+      taskText.classList.add('task-text');
+      taskText.textContent = task.text;
+      taskText.title = 'Click to toggle complete';
+
+      // Toggle completed on click of text
+      taskText.addEventListener('click', () => {
+        tasks[index].completed = !tasks[index].completed;
+        saveTasks();
+        renderTasks();
+      });
+
+      li.appendChild(taskText);
+
+      // Due date
+      if(task.dueDate) {
+        const dueSpan = document.createElement('span');
+        dueSpan.classList.add('task-due');
+        dueSpan.textContent = formatDate(task.dueDate);
+
+        // Mark overdue if due date < today and not completed
+        if(!task.completed && new Date(task.dueDate) < new Date(new Date().toDateString())) {
+          dueSpan.classList.add('overdue');
+        }
+        li.appendChild(dueSpan);
+      }
+
+      // Edit button
+      const editBtn = document.createElement('button');
+      editBtn.textContent = 'Edit';
+      editBtn.classList.add('edit-btn');
+      editBtn.addEventListener('click', () => {
+        startEditing(index, li);
+      });
+      li.appendChild(editBtn);
+
+      // Delete button
+      const delBtn = document.createElement('button');
+      delBtn.textContent = 'Delete';
+      delBtn.classList.add('delete-btn');
+      delBtn.addEventListener('click', () => {
+        tasks.splice(index, 1);
+        saveTasks();
+        renderTasks();
+      });
+      li.appendChild(delBtn);
+
+      todoList.appendChild(li);
+    });
+  }
+
+  // Format date like "Jun 5, 2025"
+  function formatDate(dateStr) {
+    const options = { year: 'numeric', month: 'short', day: 'numeric' };
+    return new Date(dateStr).toLocaleDateString(undefined, options);
+  }
+
+  // Add new task
+  function addTask() {
+    const taskText = todoInput.value.trim();
+    const dueDate = dueDateInput.value;
+
+    if(taskText === '') {
+      alert('Please enter a task!');
+      return;
+    }
+
+    tasks.push({
+      text: taskText,
+      completed: false,
+      dueDate: dueDate ? dueDate : null
+    });
+
+    saveTasks();
+    renderTasks();
+
+    todoInput.value = '';
+    dueDateInput.value = '';
+    todoInput.focus();
+  }
+
+  // Start editing task
+  function startEditing(index, li) {
+    li.innerHTML = '';
+
+    const editInput = document.createElement('input');
+    editInput.type = 'text';
+    editInput.value = tasks[index].text;
+    editInput.classList.add('edit-input');
+
+    const editDate = document.createElement('input');
+    editDate.type = 'date';
+    editDate.value = tasks[index].dueDate || '';
+    editDate.classList.add('edit-date');
+
+    const saveBtn = document.createElement('button');
+    saveBtn.textContent = 'Save';
+    saveBtn.classList.add('add-btn');
+    saveBtn.style.width = 'auto';
+    saveBtn.style.padding = '6px 15px';
+    saveBtn.style.fontSize = '14px';
+
+    const cancelBtn = document.createElement('button');
+    cancelBtn.textContent = 'Cancel';
+    cancelBtn.classList.add('delete-btn');
+    cancelBtn.style.width = 'auto';
+    cancelBtn.style.padding = '6px 15px';
+    cancelBtn.style.fontSize = '14px';
+
+    li.appendChild(editInput);
+    li.appendChild(editDate);
+    li.appendChild(saveBtn);
+    li.appendChild(cancelBtn);
+
+    editInput.focus();
+
+    saveBtn.addEventListener('click', () => {
+      const newText = editInput.value.trim();
+      const newDue = editDate.value;
+
+      if(newText === '') {
+        alert('Task cannot be empty!');
+        return;
+      }
+
+      tasks[index].text = newText;
+      tasks[index].dueDate = newDue ? newDue : null;
+      saveTasks();
+      renderTasks();
+    });
+
+    cancelBtn.addEventListener('click', () => {
+      renderTasks();
+    });
+  }
+
+  addBtn.addEventListener('click', addTask);
+
+  todoInput.addEventListener('keypress', (e) => {
+    if(e.key === 'Enter') {
+      addTask();
+    }
+  });
+
+  // Initial render on page load
+  renderTasks();
+</script>
+
+
+
+
+
+
+
+
+
+
+<h1>Bachelors of Computer Application </h1>
+<br>
+<p>Semester – wise</p>
+<br>
+<p>Course Code Course Name
+</p>
+<br>
+<br>
+<br>
+    <div class="quastion">
+        <h1 id="same1">Bachelors of Computer Application </h1>
+        <br>
+
+        <h1>SEMESTER-I</h1>
+        <br>
+        <a href="math.html">101 Mathematics-I</a>
+        <a href="algorithm.html">102 Programming Principle & Algorithm
+</a>
+        <a href="computer.html">103 Computer Fundamental and Office
+Automation</a>
+        <a href="principal.html">104 Principle of Management</a>
+        <a href="besnuss.html">106 Business Communication</a>
+        <br>
+        <a style="border-radius: 3px; background-color: #0056b3; color: #ccc; height: 50px; " href="seme1.html">All quastion paper</a>
+        
+    </div>
+    <br>
+    <br>
+    <div class="quastion">
+         <h1 id="Same2">Bachelors of Computer Application </h1>
+         <br>
+         <h1>SEMESTER -II</h1>
+        <a href="amth2.html">201 Mathematics-II</a>
+        <a href="cprogram.html">202 C-Programming</a>
+        <a href="organiz.html">203 Organization Behavior</a>
+        <a href="digital.html">204 Digital Electronics and Computer Organisation</a>
+        <a href="financial.html">205 Financial Accounting and Management</a>
+    </div>
+    <br>
+    <br>
+    <div class="quastion">
+         <h1 id="same3">Bachelors of Computer Application </h1>
+        <br>
+        <h1> SEMESTER -III</h1>
+
+        <a href="object.html">301 Object Oriented Programming Using C++</a>
+        <a href="data3.html">302 Data Structure Using C & C++</a>
+        <a href="assembly.html">303 Computer Architecture & Assembly Language</a>
+        <a href="business.html">304 Business Economics</a>
+        <a href="statics.html">305 Elements of Statistics</a>
+    </div>
+    <br>
+    <br>
+    <div class="quastion">
+        <h1 id="seme4">Bachelors of Computer Application</h1>
+        <br>
+        <h1>SEMESTER -IV</h1>
+        <a href="graphic.html">401 Computer Graphics & Multimedia Application</a>
+        <a href="oprating.html">402 Operating System</a>
+        <a href="softwere.html">403 Software Engineering</a>
+        <a href="opyimazation.html">404 Optimization Techniques</a>
+        <a href="mathmaitcs.html">405 Mathematics-III</a>
+    </div>
+    <br>
+    <br>
+    <br>
+     <div class="quastion">
+        <h1 id="Semester5">Bachelors of Computer Application</h1>
+        <br>
+        <h1>SEMESTER -V</h1>
+        <a href="dbms.html">501 Introduction to DBMS</a>
+        <a href="java.html">502 Java Programming and Dynamic Webpage Design </a>
+        <a href="comnetwork.html">503 Computer Network</a>
+        <a href="numerical.html">504 Numerical Methods</a>
+    </div>
+    <br>
+    <br>
+    <br>
+      <div class="quastion">
+        <h1 id="same6">Bachelors of Computer Application</h1>
+        <br>
+        <h1>SEMESTER-VI
+</h1>
+        <a href="network.html">601 Computer Network Security</a>
+        <a href="system.html">602 Information System: Analysis Design & Implementation</a>
+        <a href="ecommorce.html">603 E-Commerce</a>
+        <a href="nowlege.html">604 Knowledge Management
+</a>
+    </div>
+    <br>
+        <div class="quastion">
+      <h1 id="calkul">All CALCULATOR</h1>
+         <a href="gst.html">1 GST Calculator</a>
+        <a href="emi.html">2 EMI Calculator</a>
+        <a href="bmi.html">3 BMI Calculator</a>
+        <a href="sip.html">4 SIP Calculator</a>
+        <a href="age.html">5 Age Calculator</a>
+        <a href="per.html">6 Percentage Calculator</a>
+        <a href="dis.html">7 Discount Calculator</a>
+    </div>
+    <br>
+    <br>
+    <div class="quastion">
+      <h1 id="quiz">BCA-quiz</h1>
+
+
+        <a href="all.html">1 C++ Quiz</a>
+        <a href="adata.html">2 DATA Structure Quiz</a>
+        <a href="dbmss.html">3 DBMS Quiz</a>
+        <a href="netw.html">4 Networking Quiz</a>
+        <a href="os.html">5 OS Quiz</a>
+    </div>
+    <br>
+    <br>
+    <br>
+
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 BCA-HUB</p>
+  </footer>
+
+  <!-- JS --
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('show');
+    }
+  </script>-->
+  <script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('show');
+  }
+
+  // Sidebar close on outside touch (for mobile)
+  document.addEventListener('touchstart', function (event) {
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.querySelector('.sidebar-toggle');
+
+    // agar sidebar open hai aur user ne sidebar aur toggle button ke bahar click kiya
+    if (
+      sidebar.classList.contains('show') &&
+      !sidebar.contains(event.target) &&
+      !toggleBtn.contains(event.target)
+    ) {
+      sidebar.classList.remove('show');
+    }
+  });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BCAHUB</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+    }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #0073e6;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 2em;
+    }
+
+    .search-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    #search-bar {
+      padding: 8px;
+      width: 70%;
+      max-width: 300px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .sidebar-toggle {
+      font-size: 24px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 160px;
+      background-color: #333;
+      color: white;
+      height: 100vh;
+      position: fixed;
+      top: 60px;
+      left: -160px;
+      transition: left 0.3s ease;
+      overflow-y: auto;
+      z-index: 998;
+    }
+
+    .sidebar.show {
+      left: 0;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 12px 18px;
+      border-bottom: 1px solid #444;
+      color: white;
+      text-decoration: none;
+      font-size: 0.95em;
+    }
+
+    .sidebar a:hover {
+      background-color: #444;
+    }
+
+    /* SCROLLABLE LINKS */
+    .scrollable-links {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background-color: #333;
+     
+      white-space: nowrap;
+      padding-left: 0;
+      z-index: 999;
+    }
+
+    .scrollable-links a {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 15px;
+    }
+
+    .scrollable-links a:hover {
+      background-color: #0073e6;
+      color: white;
+    }
+
+    /* MAIN CONTENT */
+    .main {
+      padding: 20px;
+      margin-top: 130px;
+       
+    }
+
+    
+    /* FOOTER */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      
+      margin-top: 50px;
+    }
+
+    /* DESKTOP STYLES */
+    @media (min-width: 768px) {
+      .sidebar {
+        left: 0;
+      }
+
+      .sidebar-toggle {
+        display: none;
+      }
+
+      .main {
+        margin-left: 250px;
+      }
+
+      .scrollable-links {
+        padding-left: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="sidebar-toggle" onclick="toggleSidebar()">☰</div>
+    <div class="logo">BCA-HUB</div>
+   
+  </header>
+
+  <!-- SCROLLABLE LINKS -->
+  <div class="scrollable-links">
+    <a href="index.html">home</a>
+    <a href="#calkul">All Calculator</a>
+    <a href="#quiz">All Quiz</a>
+    <a href="#sem1"></a>
+    <a href="#same2"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+        <a href="seme1.html"></a>
+  </div>
+
+
+  <!-- SIDEBAR -->
+  <div class="sidebar" id="sidebar">
+   <a href="#">C </a>
+  <br>
+       <a href="index.html">HOME</a>
+        <a href="#same1">sem 1</a>
+        <a href="#Same2">sem 2</a>
+        <a href="#same3">sem 3</a>
+         <a href="#seme4">sem 4</a>
+          <a href="#Semester5">sem 5</a>
+        <a href="#same6">sem 6</a>
+        <a href="cquiz.html">C Language quiz</a>
+         <a href="#quiz">All Quiz</a>
+        <a href="#calkul">All Calculator</a>
+   
+    
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+   <style>
+    .quiz-container {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .question {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+  }
+  .options label {
+    display: block;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+  }
+  button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  #result {
+    margin-top: 25px;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    color: #007bff;
+  }
+</style>
+
+<h1>C Language Quiz</h1>
+<br>
+<br>
+<div class="quiz-container" id="quiz">
+  <!-- Question and options appear here -->
+</div>
+
+<button id="nextBtn" disabled>Next</button>
+
+<div id="result"></div>
+
+<script>
+const quizData = [
+  {
+    question: "1. C language kisne banayi thi?",
+    options: ["Dennis Ritchie", "Bjarne Stroustrup", "James Gosling", "Ken Thompson"],
+    answer: "Dennis Ritchie"
+  },
+  {
+    question: "2. C language kis saal develop hui thi?",
+    options: ["1972", "1980", "1969", "1990"],
+    answer: "1972"
+  },
+  {
+    question: "3. C program ka entry point kaun sa function hota hai?",
+    options: ["main()", "start()", "init()", "execute()"],
+    answer: "main()"
+  },
+  {
+    question: "4. C me integer variable declare karne ke liye kaunsa keyword use hota hai?",
+    options: ["float", "int", "char", "double"],
+    answer: "int"
+  },
+  {
+    question: "5. C me comments ko kaise likhte hain?",
+    options: ["// comment", "/* comment */", "Both a and b", "# comment"],
+    answer: "Both a and b"
+  },
+  {
+    question: "6. C me ek character ko store karne ke liye kaunsa data type use karte hain?",
+    options: ["int", "float", "char", "double"],
+    answer: "char"
+  },
+  {
+    question: "7. C me pointer ka use kya hota hai?",
+    options: ["Variable ki value store karne ke liye", "Memory address store karne ke liye", "Function call karne ke liye", "None of the above"],
+    answer: "Memory address store karne ke liye"
+  },
+  {
+    question: "8. C me array ka index kaha se start hota hai?",
+    options: ["1", "0", "-1", "10"],
+    answer: "0"
+  },
+  {
+    question: "9. C me ‘printf’ function ka use kya hai?",
+    options: ["Input lene ke liye", "Output dikhane ke liye", "Memory allocate karne ke liye", "Loop chalane ke liye"],
+    answer: "Output dikhane ke liye"
+  },
+  {
+    question: "10. C me infinite loop ka example kya hai?",
+    options: ["for(;;)", "while(0)", "do-while(0)", "None of these"],
+    answer: "for(;;)"
+  },
+  {
+    question: "11. C me ‘scanf’ function ka use kya hai?",
+    options: ["Input lene ke liye", "Output dikhane ke liye", "Memory allocate karne ke liye", "Loop chalane ke liye"],
+    answer: "Input lene ke liye"
+  },
+  {
+    question: "12. C me ‘break’ statement ka kya kaam hai?",
+    options: ["Loop ko continue karna", "Loop ko terminate karna", "Function ko call karna", "Variable ko initialize karna"],
+    answer: "Loop ko terminate karna"
+  },
+  {
+    question: "13. C me structure ko define karne ke liye kaunsa keyword use hota hai?",
+    options: ["struct", "union", "class", "enum"],
+    answer: "struct"
+  },
+  {
+    question: "14. C me ‘void’ keyword ka kya matlab hai?",
+    options: ["Variable type", "Function jo value return nahi karta", "Data type for integers", "None of these"],
+    answer: "Function jo value return nahi karta"
+  },
+  {
+    question: "15. C me dynamically memory allocate karne ke liye kaunsa function use hota hai?",
+    options: ["malloc()", "calloc()", "realloc()", "All of these"],
+    answer: "All of these"
+  },
+  {
+    question: "16. C me pointer ko NULL assign karne ke liye kaunsa value use hota hai?",
+    options: ["0", "NULL", "-1", "None of these"],
+    answer: "NULL"
+  },
+  {
+    question: "17. C me ‘enum’ ka use kya hota hai?",
+    options: ["Floating point numbers ke liye", "Group of constants banane ke liye", "Array banane ke liye", "None of the above"],
+    answer: "Group of constants banane ke liye"
+  },
+  {
+    question: "18. C me ‘#include <stdio.h>’ ka kya matlab hai?",
+    options: ["Program start karna", "Standard input/output functions ko include karna", "Variable declare karna", "Loop chalana"],
+    answer: "Standard input/output functions ko include karna"
+  },
+  {
+    question: "19. C me ‘for’ loop ka syntax kya hota hai?",
+    options: ["for(initialization; condition; increment/decrement)", "for(condition)", "for(initialization; condition)", "for()"],
+    answer: "for(initialization; condition; increment/decrement)"
+  },
+  {
+    question: "20. C me ‘return 0;’ ka kya matlab hai?",
+    options: ["Program successfully complete hua", "Error hua program me", "Function call kiya", "Variable initialize kiya"],
+    answer: "Program successfully complete hua"
+  }
+];
+
+const quizContainer = document.getElementById('quiz');
+const nextBtn = document.getElementById('nextBtn');
+const resultDiv = document.getElementById('result');
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+function loadQuestion() {
+  resultDiv.textContent = '';
+  nextBtn.disabled = true;
+
+  const currentQ = quizData[currentQuestionIndex];
+  quizContainer.innerHTML = `
+    <div class="question">${currentQ.question}</div>
+    <div class="options">
+      ${currentQ.options.map((opt, i) => `
+        <label>
+          <input type="radio" name="option" value="${opt}" />
+          ${opt}
+        </label>
+      `).join('')}
+    </div>
+  `;
+
+  // Add event listener to options to enable next button on select
+  const optionInputs = document.querySelectorAll('input[name="option"]');
+  optionInputs.forEach(input => {
+    input.addEventListener('change', () => {
+      nextBtn.disabled = false;
+    });
+  });
+}
+
+nextBtn.addEventListener('click', () => {
+  const selectedOption = document.querySelector('input[name="option"]:checked');
+  if (!selectedOption) return; // safety check
+
+  // Check answer
+  if (selectedOption.value === quizData[currentQuestionIndex].answer) {
+    score++;
+  }
+
+  currentQuestionIndex++;
+
+  if (currentQuestionIndex < quizData.length) {
+    loadQuestion();
+  } else {
+    showResult();
+  }
+});
+
+function showResult() {
+  quizContainer.innerHTML = '';
+  nextBtn.style.display = 'none';
+  resultDiv.textContent = `Aapka score hai: ${score} / ${quizData.length}`;
+}
+
+loadQuestion();
+</script>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 BCA-HUB</p>
+  </footer>
+
+  <!-- JS --
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('show');
+    }
+  </script>-->
+  <script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('show');
+  }
+
+  // Sidebar close on outside touch (for mobile)
+  document.addEventListener('touchstart', function (event) {
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.querySelector('.sidebar-toggle');
+
+    // agar sidebar open hai aur user ne sidebar aur toggle button ke bahar click kiya
+    if (
+      sidebar.classList.contains('show') &&
+      !sidebar.contains(event.target) &&
+      !toggleBtn.contains(event.target)
+    ) {
+      sidebar.classList.remove('show');
+    }
+  });
+</script>
+
+
+</body>
+</html>

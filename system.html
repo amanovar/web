@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BCAHUB</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+    }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #0073e6;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5em;
+    }
+
+    .search-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    #search-bar {
+      padding: 8px;
+      width: 70%;
+      max-width: 300px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .sidebar-toggle {
+      font-size: 24px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 160px;
+      background-color: #333;
+      color: white;
+      height: 100vh;
+      position: fixed;
+      top: 60px;
+      left: -160px;
+      transition: left 0.3s ease;
+      overflow-y: auto;
+      z-index: 998;
+    }
+
+    .sidebar.show {
+      left: 0;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 12px 18px;
+      border-bottom: 1px solid #444;
+      color: white;
+      text-decoration: none;
+      font-size: 0.95em;
+    }
+
+    .sidebar a:hover {
+      background-color: #444;
+    }
+
+    /* SCROLLABLE LINKS */
+    .scrollable-links {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background-color: #333;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding-left: 0;
+      z-index: 999;
+    }
+
+    .scrollable-links a {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 15px;
+    }
+
+    .scrollable-links a:hover {
+      background-color: #0073e6;
+      color: white;
+    }
+
+    /* MAIN CONTENT */
+    .main {
+      padding: 20px;
+      margin-top: 130px;
+       border: 3px solid red;
+    }
+
+    
+    /* FOOTER */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      
+      margin-top: 50px;
+    }
+
+    /* DESKTOP STYLES */
+    @media (min-width: 768px) {
+      .sidebar {
+        left: 0;
+      }
+
+      .sidebar-toggle {
+        display: none;
+      }
+
+      .main {
+        margin-left: 250px;
+      }
+
+      .scrollable-links {
+        padding-left: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="sidebar-toggle" onclick="toggleSidebar()">☰</div>
+    <div class="logo">BCA-HUB</div>
+    <div class="search-container">
+      <input type="text" id="search-bar" placeholder="Search..." />
+    </div>
+  </header>
+
+  <!-- SCROLLABLE LINKS -->
+  <div class="scrollable-links">
+    <a href="index.html">home</a>
+    <a href="#calkul">All Calculator</a>
+    <a href="#quiz">All Quiz</a>
+    <a href="#sem1">Java</a>
+    <a href="#same2">Python</a>
+    <a href="#">NodeJS</a>
+    <a href="#">PHP</a>
+    <a href="#">React</a>
+    <a href="#">More</a>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar" id="sidebar">
+   <a href="#">C </a>
+  <br>
+       <a href="index.html">HOME</a>
+        <a href="#same1">sem 1</a>
+        <a href="#Same2">sem 2</a>
+        <a href="#same3">sem 3</a>
+         <a href="#seme4">sem 4</a>
+          <a href="#Semester5">sem 5</a>
+        <a href="#same6">sem 6</a>
+        <a href="cquiz.html">C Language quiz</a>
+        <a href="cheat.html">C Language cheat</a>
+         <a href="#quiz">All Quiz</a>
+        <a href="#calkul">All Calculator</a>
+   
+    
+  </div>
+  <!-- MAIN CONTENT -->
+  <div class="main">
+    <h1>BCA-602 Information System Analysis Design and Implementation</h1>
+    <br>
+    <h1>UNIT-I</h1>
+<br>
+<h1>Overview of System Analysis and Design:</h1>
+<br>
+<p>Systems Development Life Cycle; concept and
+Models: requirements determination, logical design, physical design, test planning,
+implementation, planning and performance evaluation, communication, interviewing,
+presentation skills; group dynamics; risk and feasibility analysis; group based approaches, JAD,
+structures walkthroughs, and design and code reviews; prototyping; database design software
+quality metrics; application categories software package evaluation and acquisition.</p>
+<br>
+<br>
+<br>
+<h1>UNIT-II</h1>
+<br>
+<h1>Information Requirement Analysis:</h1>
+<br>
+<p>Process modeling with physical logical data flow
+diagrams, data modeling with logical entity relationship diagrams.
+</p>
+<br>
+<br>
+<br>
+<h1>UNIT-III</h1>
+<br>
+<h1>Developing a Proposal:</h1>
+<br>
+<p>: Feasibility study and cost estimation.</p>
+<h2>System Design:</h2>
+<p>: Design of input and control, design of output and control, file design/database
+design, process, user interface design, prototyping; software constructors; documentation.</p>
+<br>
+<br>
+<br>
+<h1>UNIT-IV
+</h1>
+<br>
+<h1>Application Development Methodologies and CASE tools</h1>
+<br>
+<p>Information engineering structured
+system analysis and design, and object oriented methodologies for application development data
+modeling, process modeling, user interface design, and prototyping, use of computer aided
+software engineering (CASE) tools in the analysis design and implementation of information
+systems.</p>
+<br>
+<br>
+<br>
+<h1>UNIT-V</h1>
+<br>
+<h1>Design and Implementation on OO Platform:</h1>
+<br>
+<p>: Object oriented analysis and design through
+object modeling technique, object modeling, dynamic modeling and functional object oriented
+design and object oriented programming systems for implementation, object oriented data bases.</p>
+<br>
+<br>
+<br>
+<h1>UNIT-VI</h1>
+<br>
+<h1>Managerial issues in Software Projects:</h1>
+<br>
+<p>Introduction to software markets; planning of
+software projects, size and cost estimates; project scheduling; measurement of software quality
+and productivity, ISO and capability maturity models for organizational growth.</p>
+
+  
+
+
+
+   
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 BCA-HUB</p>
+  </footer>
+
+  <!-- JS --
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('show');
+    }
+  </script>-->
+  <script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('show');
+  }
+
+  // Sidebar close on outside touch (for mobile)
+  document.addEventListener('touchstart', function (event) {
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.querySelector('.sidebar-toggle');
+
+    // agar sidebar open hai aur user ne sidebar aur toggle button ke bahar click kiya
+    if (
+      sidebar.classList.contains('show') &&
+      !sidebar.contains(event.target) &&
+      !toggleBtn.contains(event.target)
+    ) {
+      sidebar.classList.remove('show');
+    }
+  });
+</script>
+
+
+</body>
+</html>

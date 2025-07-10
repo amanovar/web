@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BCAHUB</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+    }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #0073e6;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 2em;
+    }
+
+    .search-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    #search-bar {
+      padding: 8px;
+      width: 70%;
+      max-width: 300px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .sidebar-toggle {
+      font-size: 24px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 160px;
+      background-color: #333;
+      color: white;
+      height: 100vh;
+      position: fixed;
+      top: 60px;
+      left: -160px;
+      transition: left 0.3s ease;
+      overflow-y: auto;
+      z-index: 998;
+    }
+
+    .sidebar.show {
+      left: 0;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 12px 18px;
+      border-bottom: 1px solid #444;
+      color: white;
+      text-decoration: none;
+      font-size: 0.95em;
+    }
+
+    .sidebar a:hover {
+      background-color: #444;
+    }
+
+    /* SCROLLABLE LINKS */
+    .scrollable-links {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background-color: #333;
+      
+      white-space: nowrap;
+      padding-left: 0;
+      z-index: 999;
+    }
+
+    .scrollable-links a {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 15px;
+    }
+
+    .scrollable-links a:hover {
+      background-color: #0073e6;
+      color: white;
+    }
+
+    /* MAIN CONTENT */
+    .main {
+      padding: 20px;
+      margin-top: 130px;
+       border: 3px solid red;
+    }
+
+    
+    /* FOOTER */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      
+      margin-top: 50px;
+    }
+
+    /* DESKTOP STYLES */
+    @media (min-width: 768px) {
+      .sidebar {
+        left: 0;
+      }
+
+      .sidebar-toggle {
+        display: none;
+      }
+
+      .main {
+        margin-left: 250px;
+      }
+
+      .scrollable-links {
+        padding-left: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="sidebar-toggle" onclick="toggleSidebar()">☰</div>
+    <div class="logo">BCA-HUB</div>
+   
+  </header>
+
+ 
+
+  <!-- SIDEBAR -->
+  <div class="sidebar" id="sidebar">
+   <a href="#">C </a>
+  <br>
+       <a href="index.html">HOME</a>
+        <a href="#same1">sem 1</a>
+        <a href="#Same2">sem 2</a>
+        <a href="#same3">sem 3</a>
+         <a href="#seme4">sem 4</a>
+          <a href="#Semester5">sem 5</a>
+        <a href="#same6">sem 6</a>
+        <a href="cquiz.html">C Language quiz</a>
+        <a href="cheat.html">C Language cheat</a>
+         <a href="#quiz">All Quiz</a>
+        <a href="#calkul">All Calculator</a>
+   
+    
+  </div>
+  <!-- MAIN CONTENT -->
+  <div class="main">
+    <h1>BCA-304 Business Economics</h1>
+    <br>
+    <h1>UNIT-I
+</h1>
+<br>
+<h1>The Scope and Method of Economics, the Economic Problem: </h1>
+<br>
+<p>: Scarity & Choice, The Price
+Mechanism, Demand & Supply Equilibrium: The Concept of Elasticity and it’s Applications</p>
+<p>The Production Process: output decisions – Revenues Costs and Profit Maximisation</p>
+<p>Laws of returns & Returns to Scale: Economics and Diseconomies of scale.</p>
+<br>
+<br>
+<br>
+<h1>UNIT-II</h1>
+<br>
+<h1>Market Structure:</h1>
+<br>
+<p>Equilibrium of a firm and Price, Output Determination under Perfect
+Competition Monopoly, Monoplastic Competition & Oligopoly</p>
+<br>
+<br>
+<br>
+<h1>UNIT-III</h1>
+<br>
+<h1>Macro Economic Concerns</h1>
+<br>
+<p>Inflalation, Unemployment, Trade-Cycles, Circular Flow upto Four Sector Economy,
+Government in the Macro Economy: Fiscal Policy, Monetary Policy, Measuring national Income
+and Output</p>
+<br>
+<br>
+<br>
+<h1>UNIT-IV</h1>
+<br>
+<p>The World Economy – WTO, Globalisation, MNC’s, Outsourcing, Foreign Capital in India,
+Trips, Groups of Twenty (G-20), Issues of dumping, Export-Import Policy 2004-2009</p>
+<br>
+<br>
+<br>
+<h1></h1>
+<br>
+<h1></h1>
+<br>
+<p></p>
+<br>
+<br>
+<br>
+<h1></h1>
+<br>
+<h1></h1>
+<br>
+<p></p>
+
+  
+
+
+
+   
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 BCA-HUB</p>
+  </footer>
+
+  <!-- JS --
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('show');
+    }
+  </script>-->
+  <script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('show');
+  }
+
+  // Sidebar close on outside touch (for mobile)
+  document.addEventListener('touchstart', function (event) {
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.querySelector('.sidebar-toggle');
+
+    // agar sidebar open hai aur user ne sidebar aur toggle button ke bahar click kiya
+    if (
+      sidebar.classList.contains('show') &&
+      !sidebar.contains(event.target) &&
+      !toggleBtn.contains(event.target)
+    ) {
+      sidebar.classList.remove('show');
+    }
+  });
+</script>
+
+
+</body>
+</html>

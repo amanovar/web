@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BCAHUB</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+    }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #0073e6;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5em;
+    }
+
+    .search-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    #search-bar {
+      padding: 8px;
+      width: 70%;
+      max-width: 300px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .sidebar-toggle {
+      font-size: 24px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 160px;
+      background-color: #333;
+      color: white;
+      height: 100vh;
+      position: fixed;
+      top: 60px;
+      left: -160px;
+      transition: left 0.3s ease;
+      overflow-y: auto;
+      z-index: 998;
+    }
+
+    .sidebar.show {
+      left: 0;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 12px 18px;
+      border-bottom: 1px solid #444;
+      color: white;
+      text-decoration: none;
+      font-size: 0.95em;
+    }
+
+    .sidebar a:hover {
+      background-color: #444;
+    }
+
+    /* SCROLLABLE LINKS */
+    .scrollable-links {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background-color: #333;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding-left: 0;
+      z-index: 999;
+    }
+
+    .scrollable-links a {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 15px;
+    }
+
+    .scrollable-links a:hover {
+      background-color: #0073e6;
+      color: white;
+    }
+
+    /* MAIN CONTENT */
+    .main {
+      padding: 20px;
+      margin-top: 130px;
+       border: 3px solid red;
+    }
+
+    
+    /* FOOTER */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      
+      margin-top: 50px;
+    }
+
+    /* DESKTOP STYLES */
+    @media (min-width: 768px) {
+      .sidebar {
+        left: 0;
+      }
+
+      .sidebar-toggle {
+        display: none;
+      }
+
+      .main {
+        margin-left: 250px;
+      }
+
+      .scrollable-links {
+        padding-left: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="sidebar-toggle" onclick="toggleSidebar()">☰</div>
+    <div class="logo">BCA-HUB</div>
+    <div class="search-container">
+      <input type="text" id="search-bar" placeholder="Search..." />
+    </div>
+  </header>
+
+ <!-- SCROLLABLE LINKS -->
+  <div class="scrollable-links">
+    <a href="index.html">home</a>
+    <a href="#calkul">All Calculator</a>
+    <a href="#quiz">All Quiz</a>
+    <a href="#sem1">Java</a>
+    <a href="#same2">Python</a>
+    <a href="#">NodeJS</a>
+    <a href="#">PHP</a>
+    <a href="#">React</a>
+    <a href="#">More</a>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar" id="sidebar">
+   <a href="#">C </a>
+  <br>
+       <a href="index.html">HOME</a>
+        <a href="#same1">sem 1</a>
+        <a href="#Same2">sem 2</a>
+        <a href="#same3">sem 3</a>
+         <a href="#seme4">sem 4</a>
+          <a href="#Semester5">sem 5</a>
+        <a href="#same6">sem 6</a>
+        <a href="cquiz.html">C Language quiz</a>
+        <a href="cheat.html">C Language cheat</a>
+         <a href="#quiz">All Quiz</a>
+        <a href="#calkul">All Calculator</a>
+   
+    
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+    <h1>BCA-402 Operating System</h1>
+    <br>
+    <h1>UNIT-I</h1>
+<br>
+<p>Introduction, What is an operating system, Simple Batch Systems, Multi-programmed Batch
+systems, Time- Sharing Systems, Personal – Computer Systems, Parallel systems, Distributed
+</p>
+<p>systems, Real- Time Systems</p>
+<br>
+<h2>Memory Management:</h2>
+<br>
+<p>: Background, Logical versus physical Address space, swapping,
+Contiguous allocation, Paging, Segmentation</p>
+<h2>Virtual Memory:</h2>
+<p>: Demand Paging, Page Replacement, Page- replacement Algorithms,
+Performance of Demand Paging, Allocation of Frames, Thrashing, Other Considerations</p>
+<br>
+<br>
+<h1>UNIT-II</h1>
+<br>
+<h1>Processes:</h1>
+<br>
+<p>: Process Concept, Process Scheduling, Operation on Processes</p>
+<h2>CPU Scheduling:</h2>
+<br>
+<p>: Basic Concepts, Scheduling Criteria, Scheduling Algorithms, Multiple –
+Processor Scheduling</p>
+<br>
+<h2>Process Synchronization</h2>
+<p>: Background, The Critical – Section Problem, Synchronization
+Hardware, Semaphores, Classical Problems of Synchronization</p>
+<br>
+<h1>UNIT-III</h1>
+<br>
+<h1>Deadlocks: </h1>
+<br>
+<p>System Model, Deadlock Characterization, Methods for Handling Deadlocks,
+Deadlock prevention, Deadlock Avoidance, Deadlock Detection, Recovery from Deadlock</p>
+<br>
+<br>
+<br>
+<h1>UNIT-IV</h1>
+<br>
+<h1>Device Management</h1>
+<br>
+<p>: Techniques for Device Management, Dedicated Devices, Shared Devices,
+Virtual Devices; Input or Output Devices, Storage Devices, Buffering, Secondary Storage
+Structure: Disk Structure, Disk Scheduling, Disk Management, Swap- Space Management, Disk
+Reliability</p>
+<br>
+<br>
+<br>
+<h1>UNIT-V</h1>
+<br>
+<h1>Information Management</h1>
+<br>
+<p>: Introduction, A Simple File system, General Model of a File
+System, Symbolic File System, Basic File System, Access Control Verification, Logical File
+System, Physical File system File – System Interface; File Concept, Access Methods, Directory
+Structure, Protection, Consistency Semantics File – System Implementation: File – System
+Structure, Allocation Methods, Free- Space Management</p>
+
+
+  
+
+
+
+   
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 BCA-HUB</p>
+  </footer>
+
+  <!-- JS --
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('show');
+    }
+  </script>-->
+  <script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('show');
+  }
+
+  // Sidebar close on outside touch (for mobile)
+  document.addEventListener('touchstart', function (event) {
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.querySelector('.sidebar-toggle');
+
+    // agar sidebar open hai aur user ne sidebar aur toggle button ke bahar click kiya
+    if (
+      sidebar.classList.contains('show') &&
+      !sidebar.contains(event.target) &&
+      !toggleBtn.contains(event.target)
+    ) {
+      sidebar.classList.remove('show');
+    }
+  });
+</script>
+
+
+</body>
+</html>

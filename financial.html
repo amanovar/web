@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BCAHUB</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+    }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #0073e6;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5em;
+    }
+
+    .search-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    #search-bar {
+      padding: 8px;
+      width: 70%;
+      max-width: 300px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .sidebar-toggle {
+      font-size: 24px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 160px;
+      background-color: #333;
+      color: white;
+      height: 100vh;
+      position: fixed;
+      top: 60px;
+      left: -160px;
+      transition: left 0.3s ease;
+      overflow-y: auto;
+      z-index: 998;
+    }
+
+    .sidebar.show {
+      left: 0;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 12px 18px;
+      border-bottom: 1px solid #444;
+      color: white;
+      text-decoration: none;
+      font-size: 0.95em;
+    }
+
+    .sidebar a:hover {
+      background-color: #444;
+    }
+
+    /* SCROLLABLE LINKS */
+    .scrollable-links {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background-color: #333;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding-left: 0;
+      z-index: 999;
+    }
+
+    .scrollable-links a {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 15px;
+    }
+
+    .scrollable-links a:hover {
+      background-color: #0073e6;
+      color: white;
+    }
+
+    /* MAIN CONTENT */
+    .main {
+      padding: 20px;
+      margin-top: 130px;
+       border: 3px solid red;
+    }
+
+    
+    /* FOOTER */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      
+      margin-top: 50px;
+    }
+
+    /* DESKTOP STYLES */
+    @media (min-width: 768px) {
+      .sidebar {
+        left: 0;
+      }
+
+      .sidebar-toggle {
+        display: none;
+      }
+
+      .main {
+        margin-left: 250px;
+      }
+
+      .scrollable-links {
+        padding-left: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="sidebar-toggle" onclick="toggleSidebar()">☰</div>
+    <div class="logo">BCA-HUB</div>
+    <div class="search-container">
+      <input type="text" id="search-bar" placeholder="Search..." />
+    </div>
+  </header>
+<!-- SCROLLABLE LINKS -->
+  <div class="scrollable-links">
+    <a href="index.html">home</a>
+    <a href="#calkul">All Calculator</a>
+    <a href="#quiz">All Quiz</a>
+    <a href="#sem1">Java</a>
+    <a href="#same2">Python</a>
+    <a href="#">NodeJS</a>
+    <a href="#">PHP</a>
+    <a href="#">React</a>
+    <a href="#">More</a>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar" id="sidebar">
+   <a href="#">C </a>
+  <br>
+       <a href="index.html">HOME</a>
+        <a href="#same1">sem 1</a>
+        <a href="#Same2">sem 2</a>
+        <a href="#same3">sem 3</a>
+         <a href="#seme4">sem 4</a>
+          <a href="#Semester5">sem 5</a>
+        <a href="#same6">sem 6</a>
+        <a href="cquiz.html">C Language quiz</a>
+        <a href="cheat.html">C Language cheat</a>
+         <a href="#quiz">All Quiz</a>
+        <a href="#calkul">All Calculator</a>
+   
+    
+  </div>
+
+
+  
+  <!-- MAIN CONTENT -->
+  <div class="main">
+    <h1>BCA-205 Financial Accounting & Management</h1>
+    <br>
+    <h1>UNIT-I</h1>
+<br>
+<p>Overview - Meaning and Nature of Financial Accounting, Scope of Financial Accounting,
+Financial Accounting & Management Accounting, Accounting concepts & convention,
+Accounting standards in India</p>
+<br>
+<br>
+<br>
+<h1>UNIT-II
+</h1>
+<br>
+<p>Basics of accounting – Capital & Revenue items, Application of Computer in Accounting
+Double Entry System, Introduction to Journal, Ledger and Procedure for Recording and Posting,
+Introduction to Trail Balance, Preparation of Final Account, Profit & Loss Account and related
+concepts, Balance Sheet and related concept.
+</p>
+<br>
+<br>
+<br>
+<h1>UNIT-III</h1>
+<br>
+
+<p>Financial statement analysis: Ratio analysis, Funds flow analysis, concepts, uses, Preparation of
+funds flow statement, simple problem, Cash flow analysis, Concepts, uses, preparation of cash
+flow statement, simple problem, Break – even analysis.</p>
+<br>
+<br>
+<br>
+<h1>UNIT-IV</h1>
+<br>
+
+<p>Definition nature and Objective of Financial Management, Long Term Sources of Finance,
+Introductory idea about capitalization, Capital Structure, Concept of Cost of Capital,
+introduction, importance, explicit & implicit cost, Measurement of cost of capital, cost of debt.
+</p>
+<br>
+<br>
+<br>
+<h1>UNIT-V</h1>
+<br>
+<p>Concept & Components of working Capital. Factors Influencing the Composition of working
+Capital, Objectives of working Capital Management – Liquidity Vs. Profitability and working
+capital policies. Theory of working capital: Nature and concepts
+</p>
+<br>
+<br>
+<br>
+<h1>UNIT-VI
+</h1>
+<br>
+<p>Cash Management, Inventory Management and Receivables Management.</p>
+
+  
+
+
+
+   
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 BCA-HUB</p>
+  </footer>
+
+  <!-- JS --
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('show');
+    }
+  </script>-->
+  <script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('show');
+  }
+
+  // Sidebar close on outside touch (for mobile)
+  document.addEventListener('touchstart', function (event) {
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.querySelector('.sidebar-toggle');
+
+    // agar sidebar open hai aur user ne sidebar aur toggle button ke bahar click kiya
+    if (
+      sidebar.classList.contains('show') &&
+      !sidebar.contains(event.target) &&
+      !toggleBtn.contains(event.target)
+    ) {
+      sidebar.classList.remove('show');
+    }
+  });
+</script>
+
+
+</body>
+</html>

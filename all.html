@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BCAHUB</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+    }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #0073e6;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 2em;
+    }
+
+    .search-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    #search-bar {
+      padding: 8px;
+      width: 70%;
+      max-width: 300px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .sidebar-toggle {
+      font-size: 24px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 160px;
+      background-color: #333;
+      color: white;
+      height: 100vh;
+      position: fixed;
+      top: 60px;
+      left: -160px;
+      transition: left 0.3s ease;
+      overflow-y: auto;
+      z-index: 998;
+    }
+
+    .sidebar.show {
+      left: 0;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 12px 18px;
+      border-bottom: 1px solid #444;
+      color: white;
+      text-decoration: none;
+      font-size: 0.95em;
+    }
+
+    .sidebar a:hover {
+      background-color: #444;
+    }
+
+    /* SCROLLABLE LINKS */
+    .scrollable-links {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background-color: #333;
+     
+      white-space: nowrap;
+      padding-left: 0;
+      z-index: 999;
+    }
+
+    .scrollable-links a {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 15px;
+    }
+
+    .scrollable-links a:hover {
+      background-color: #0073e6;
+      color: white;
+    }
+
+    /* MAIN CONTENT */
+    .main {
+      padding: 20px;
+      margin-top: 130px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #0073e6;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+
+    /* CALCULATOR MENU *
+    .calculator-menu {
+      background-color: #fff;
+      height: 350px;
+      width: 350px;
+      border: none;
+      margin-left: 20px;
+      padding: 20px;
+      overflow-y: auto;
+      cursor: default;
+    }
+
+    .calculator-menu ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .calculator-menu li a {
+      display: block;
+      text-decoration: none;
+      color: #333;
+      margin: 5px 0;
+      transition: color 0.2s;
+    }
+
+    .calculator-menu li a:hover {
+      color: #007BFF;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      
+      margin-top: 50px;
+    }
+
+    /* DESKTOP STYLES */
+    @media (min-width: 768px) {
+      .sidebar {
+        left: 0;
+      }
+
+      .sidebar-toggle {
+        display: none;
+      }
+
+      .main {
+        margin-left: 250px;
+      }
+
+      .scrollable-links {
+        padding-left: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="sidebar-toggle" onclick="toggleSidebar()">☰</div>
+    <div class="logo">BCA-HUB</div>
+    
+  </header>
+
+  <!-- SCROLLABLE LINKS -->
+  <div class="scrollable-links">
+    <a href="index.html">home</a>
+    <a href="#calkul">All Calculator</a>
+    <a href="#quiz">All Quiz</a>
+    <a href="#sem1"></a>
+    <a href="#same2"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+        <a href="seme1.html"></a>
+  </div>
+
+
+  <!-- SIDEBAR -->
+  <div class="sidebar" id="sidebar">
+   <a href="c cons.html">C </a>
+  <br>
+  <a href="index.html">HOME</a>
+       <a href="all.html">1 C++ Quiz</a>
+        <a href="adata.html">2 DATA Structure Quiz</a>
+        <a href="dbmss.html">3 DBMS Quiz</a>
+        <a href="netw.html">4 Networking Quiz</a>
+        <a href="os.html">5 OS Quiz</a>
+     
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+    <h1>C++ Programming Language</h1>
+    <p>Learn C++ from basic to advanced concepts with tutorials, examples, and hands-on coding exercises.</p>
+    <a href="file:///C:/Users/HP/Desktop/New%20folder/index.html" class="cta-btn">Start</a>
+    <br>
+    <br>
+
+
+    <!-- Calculator Menu --
+    <div class="calculator-menu">
+      <ul>
+        <li><a href="gst.html">1 GST Calculator</a></li>
+        <li><a href="emi.html">2 EMI Calculator</a></li>
+        <li><a href="bmi.html">3 BMI Calculator</a></li>
+        <li><a href="sip.html">4 SIP Calculator</a></li>
+        <li><a href="age.html">5 Age Calculator</a></li>
+        <li><a href="per.html">6 Percentage Calculator</a></li>
+        <li><a href="dis.html">7 Discount Calculator</a></li>
+      </ul>
+    </div>-->
+    <div class="quiz-container">
+    <h1>🧮 C++ Programming Quiz</h1>
+    <div id="question-box">
+      <p id="question-text">Loading question...</p>
+      <div id="options"></div>
+    </div>
+    <button id="next-btn" onclick="loadNextQuestion()">Next</button>
+    <p id="score-box"></p>
+  </div>
+
+
+  </div>
+   <style>
+
+  
+  .quiz-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#question-text {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #e7e7e7;
+}
+
+button:hover {
+  background-color: #d4d4d4;
+}
+
+#next-btn {
+  background-color: #4CAF50;
+  color: white;
+  display: none;
+}
+
+.correct {
+  background-color: #c8e6c9;
+}
+
+.wrong {
+  background-color: #ffcdd2;
+}
+
+#score-box {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+</style>
+
+  
+  <script>
+    const questions = [
+  {
+    question: "Who developed C++?",
+    options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"],
+    answer: 0
+  },
+  {
+    question: "Which of the following is used to create an object?",
+    options: ["Function", "Class", "Structure", "Namespace"],
+    answer: 1
+  },
+  {
+    question: "What is the correct extension of C++ files?",
+    options: [".c", ".cpp", ".cp", ".ccp"],
+    answer: 1
+  },
+  {
+    question: "Which of these supports function overloading?",
+    options: ["C", "Python", "C++", "JavaScript"],
+    answer: 2
+  },
+  {
+    question: "Which keyword is used for inheritance?",
+    options: ["extends", "inherits", "public", "virtual"],
+    answer: 2
+  },
+  {
+    question: "Which operator is overloaded for object output?",
+    options: ["<<", ">>", "==", "+"],
+    answer: 0
+  },
+  {
+    question: "Which of the following is a valid C++ access specifier?",
+    options: ["private", "sealed", "internal", "protected internal"],
+    answer: 0
+  },
+  {
+    question: "Which of the following is not a basic data type in C++?",
+    options: ["int", "float", "string", "char"],
+    answer: 2
+  },
+  {
+    question: "What is a correct constructor declaration in C++?",
+    options: ["void MyClass()", "MyClass()", "int MyClass()", "constructor MyClass()"],
+    answer: 1
+  },
+  {
+    question: "Which concept allows the use of the same function name for different purposes?",
+    options: ["Encapsulation", "Inheritance", "Overloading", "Abstraction"],
+    answer: 2
+  },
+  {
+    question: "What is used to allocate memory dynamically in C++?",
+    options: ["malloc", "calloc", "new", "allocate"],
+    answer: 2
+  },
+  {
+    question: "What does STL stand for?",
+    options: ["Standard Type Library", "System Template Library", "Standard Template Library", "Standard Typing List"],
+    answer: 2
+  },
+  {
+    question: "What is the scope resolution operator in C++?",
+    options: ["::", ".", "->", ":"],
+    answer: 0
+  },
+  {
+    question: "Which one is not a loop structure in C++?",
+    options: ["for", "while", "repeat", "do-while"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is a correct destructor syntax?",
+    options: ["~MyClass()", "destroy MyClass()", "delete MyClass()", "dispose MyClass()"],
+    answer: 0
+  },
+  {
+    question: "Which of the following allows multiple inheritance?",
+    options: ["Java", "Python", "C++", "C#"],
+    answer: 2
+  },
+  {
+    question: "Which header file is required for cout?",
+    options: ["stdio.h", "iostream", "conio.h", "stdlib.h"],
+    answer: 1
+  },
+  {
+    question: "Which is the correct way to declare a pointer?",
+    options: ["int *p;", "int p*;", "*int p;", "p int*;"],
+    answer: 0
+  },
+  {
+    question: "How do you comment a single line in C++?",
+    options: ["/* comment */", "// comment", "# comment", "-- comment"],
+    answer: 1
+  },
+  {
+    question: "Which of the following allows defining abstract classes?",
+    options: ["virtual function", "pure virtual function", "friend function", "static function"],
+    answer: 1
+  }
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+function loadQuestion() {
+  const q = questions[currentQuestion];
+  document.getElementById("question-text").innerText = `Q${currentQuestion + 1}: ${q.question}`;
+  const optionsDiv = document.getElementById("options");
+  optionsDiv.innerHTML = "";
+
+  q.options.forEach((opt, index) => {
+    const btn = document.createElement("button");
+    btn.innerText = opt;
+    btn.onclick = () => checkAnswer(index, btn);
+    optionsDiv.appendChild(btn);
+  });
+  document.getElementById("next-btn").style.display = "none";
+}
+
+function checkAnswer(selected, btn) {
+  const correct = questions[currentQuestion].answer;
+  const allButtons = document.querySelectorAll("#options button");
+
+  allButtons.forEach((b, i) => {
+    b.disabled = true;
+    if (i === correct) b.classList.add("correct");
+    if (i === selected && i !== correct) b.classList.add("wrong");
+  });
+
+  if (selected === correct) score++;
+  document.getElementById("next-btn").style.display = "inline-block";
+}
+
+function loadNextQuestion() {
+  currentQuestion++;
+  if (currentQuestion < questions.length) {
+    loadQuestion();
+  } else {
+    showFinalScore();
+  }
+}
+
+function showFinalScore() {
+  document.getElementById("question-box").innerHTML = `<h2>🎉 Quiz Completed!</h2><p>You scored ${score} out of ${questions.length}.</p>`;
+  document.getElementById("next-btn").style.display = "none";
+}
+
+window.onload = loadQuestion;
+
+  </script>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 BCA-HUB</p>
+  </footer>
+
+  <!-- JS --
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('show');
+    }
+  </script>-->
+  <script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('show');
+  }
+
+  // Sidebar close on outside touch (for mobile)
+  document.addEventListener('touchstart', function (event) {
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.querySelector('.sidebar-toggle');
+
+    // agar sidebar open hai aur user ne sidebar aur toggle button ke bahar click kiya
+    if (
+      sidebar.classList.contains('show') &&
+      !sidebar.contains(event.target) &&
+      !toggleBtn.contains(event.target)
+    ) {
+      sidebar.classList.remove('show');
+    }
+  });
+</script>
+
+
+</body>
+</html>
